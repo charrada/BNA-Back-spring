@@ -38,19 +38,19 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class Aspects {
 
-    @Before("execution(* esprit.tn.amdounidev.Services.*.*(..))")
+    @Before("execution(* bna.projet.Services.*.*(..))")
     public void logMethodEntry(JoinPoint joinPoint){
         String name=joinPoint.getSignature().getName();
         System.out.println("dans la methode : "+name+":");
     }
 
-    @After("execution(* esprit.tn.amdounidev.Services.*.*(..))")
+    @After("execution(* bna.projet.Services.*.*(..))")
     public void logMethodEntry1(JoinPoint joinPoint){
         String name=joinPoint.getSignature().getName();
         System.out.println("la methode "+name+": est faite");
     }
 
-    @Around("execution(* esprit.tn.amdounidev.Services.*.*(..))")
+    @Around("execution(* bna.projet.Services.*.*(..))")
     public Object profile(ProceedingJoinPoint proceedingJoinPoint)throws Throwable{
         long start=System.currentTimeMillis();
         Object obj = proceedingJoinPoint.proceed();

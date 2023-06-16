@@ -39,13 +39,7 @@ public class Operation implements Serializable {
     private Date dateF;
 
 
-    @Enumerated(EnumType.ORDINAL)
-    TypeOperation typeOperation;
 
-
-
-    @Column(name = "isValid", columnDefinition = "boolean default false")
-    private Boolean isValid=false;
 
 
     // Many-to-one

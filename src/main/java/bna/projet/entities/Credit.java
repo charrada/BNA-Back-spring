@@ -31,9 +31,6 @@ public class Credit implements Serializable {
 
 
 
-    // One-to-many mapping
-    @OneToMany(mappedBy = "credit", cascade = CascadeType.ALL)
-    private List<Operation> operationList;
 
 /*
 
