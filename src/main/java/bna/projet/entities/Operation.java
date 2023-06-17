@@ -38,6 +38,7 @@ public class Operation implements Serializable {
     @Column(name="dateF")
     private Date dateF;
 
+    @Lob
     @Column(name = "image_url")
     private String imageUrl;
 
@@ -47,5 +48,13 @@ public class Operation implements Serializable {
     @ManyToOne
     @JoinColumn(name = "credit_id")
     private Credit credit;
+
+
+
+
+
+
+
+
 
 }

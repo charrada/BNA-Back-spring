@@ -60,6 +60,18 @@ public class OperationController {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*
     @PostMapping("add")
     public Operation addOperation(@RequestBody Operation operation, @RequestParam("file") MultipartFile file) {
