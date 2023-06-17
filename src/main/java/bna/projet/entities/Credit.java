@@ -21,9 +21,7 @@ public class Credit implements Serializable {
     @Column(name="idCredit")
     private Long  idCredit;
 
-//debuteuuur! sans relation
-    @Column(name="username")
-    private String username;
+
 
     @Column(name="montant")
     private Float montant;
@@ -32,11 +30,9 @@ public class Credit implements Serializable {
 
 
 
-/*
-
     @ManyToOne
-    @JoinColumn(name = "debuteur_id")
-    private Debuteur debuteur;
-*/
+    @JoinColumn(name = "debiteur_id")
+    private Debiteur debiteur;
+
 
 }

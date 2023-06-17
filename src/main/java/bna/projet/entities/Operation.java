@@ -38,7 +38,8 @@ public class Operation implements Serializable {
     @Column(name="dateF")
     private Date dateF;
 
-
+    @Column(name = "image_url")
+    private String imageUrl;
 
 
 

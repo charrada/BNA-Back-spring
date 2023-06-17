@@ -11,4 +11,6 @@ public interface IOperationService {
     List<Operation> findAllOperation();
 
     Operation findOperationById(Long id);
+
+    Operation addOperation(Operation operation);
 }

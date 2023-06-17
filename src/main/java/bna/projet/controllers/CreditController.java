@@ -1,9 +1,12 @@
 package bna.projet.controllers;
 
 
+import bna.projet.Repository.CreditRepository;
 import bna.projet.Services.CreditService;
 import bna.projet.entities.Credit;
+import bna.projet.entities.Debiteur;
 import bna.projet.entities.Departement;
+import bna.projet.entities.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +20,9 @@ public class CreditController {
 
     @Autowired
     CreditService creditService;
+
+    @Autowired
+    CreditRepository creditRepository;
 
 
 
@@ -35,6 +41,15 @@ public class CreditController {
         return creditService.findAllCredit();
     }
 
+
+
+    @GetMapping("/{debiteurId}")
+    public List<Credit> getCreditByDebiteurId(@PathVariable Long debiteurId) {
+        Debiteur debiteur = new Debiteur();
+        debiteur.setId_deb(debiteurId);
+
+        return creditRepository.findByDebiteur(debiteur);
+    }
 
 
 

@@ -33,4 +33,9 @@ public class OperationService implements IOperationService{
         return operationRepository.findById(id).orElse(new Operation());
     }
 
+   @Override
+   public Operation addOperation(Operation operation) {
+
+       return operationRepository.save(operation);
+    }
 }
