@@ -22,14 +22,14 @@ public class OperationImageController {
 
     @Autowired
     OperationImageRepository imageRepository;
-
     @PostMapping("/upload")
-    public ResponseEntity<OperationImage> uplaodImage(@RequestParam("imageFile") MultipartFile file) throws IOException {
+    public ResponseEntity<OperationImage> uplaodImage(@RequestParam("imageFile") MultipartFile file, @RequestParam("idOperation") Long idOperation) throws IOException {
         System.out.println("Original Image Byte Size - " + file.getBytes().length);
         OperationImage img = new OperationImage();
         img.setName(file.getOriginalFilename());
         img.setType(file.getContentType());
         img.setPicByte(compressBytes(file.getBytes()));
+        img.setIdOperation(idOperation); // Set the idOperation field
         imageRepository.save(img);
         return ResponseEntity.ok(img);
     }
