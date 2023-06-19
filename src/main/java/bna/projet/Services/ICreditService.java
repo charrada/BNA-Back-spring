@@ -7,8 +7,7 @@ import java.util.List;
 public interface ICreditService {
 
     Credit addCredit(Credit c);
+
+
     List<Credit> findAllCredit();
-
-
-
 }

@@ -3,7 +3,6 @@ package bna.projet.Services;
 
 import bna.projet.Repository.CreditRepository;
 import bna.projet.entities.Credit;
-import bna.projet.entities.Departement;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -20,6 +20,5 @@ public class TypePaiementOperationController {
         return typePaiementOperationService.findAllTypePaiementOperation();
     }
 
-    // Other endpoints and methods can be added here
 
 }
