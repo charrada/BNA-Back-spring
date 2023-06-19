@@ -18,8 +18,8 @@ public class Operation implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name="idFrais")
-    private Long  idFrais;
+    @Column(name="idOperation")
+    private Long  idOperation;
 
 
     @Column(name="montant")
@@ -38,11 +38,6 @@ public class Operation implements Serializable {
     @Column(name="dateF")
     private Date dateF;
 
-    @Lob
-    @Column(name = "image_url")
-    private String imageUrl;
-
-
 
     // Many-to-one
     @ManyToOne
@@ -52,7 +47,9 @@ public class Operation implements Serializable {
 
 
 
-
+    @ManyToOne
+    @JoinColumn(name = "typePaimentOperation")
+    private TypePaiementOperation typePaiementOperation;
 
 
 

@@ -36,17 +36,19 @@ public class OperationImageController {
 
 
 
-    @GetMapping(path = { "/get/{imageName}" })
-    public OperationImage getImage(@PathVariable("imageName") String imageName) throws IOException {
-        final Optional<OperationImage> retrievedImage = imageRepository.findByName(imageName);
+    @GetMapping(path = { "/get/{idOperation}" })
+    public OperationImage getImageByOperationId(@PathVariable("idOperation") Long idOperation) throws IOException {
+        final Optional<OperationImage> retrievedImage = imageRepository.findByIdOperation(idOperation);
         if (retrievedImage.isPresent()) {
             OperationImage img = retrievedImage.get();
             img.setPicByte(decompressBytes(img.getPicByte())); // Decompress the image bytes
             return img;
         } else {
-            throw new IOException("Image not found: " + imageName);
+            throw new IOException("Image not found for operation ID: " + idOperation);
         }
     }
+
+
 
     // compress the image bytes before storing it in the database
     public static byte[] compressBytes(byte[] data) {
