@@ -3,6 +3,7 @@ package bna.projet.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -11,14 +12,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class TypePaiementOperation {
+public class TypeVirement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="idType")
-    private Long idType;
+    @Column(name="rib")
+    private Long rib;
 
-    @Column(name="nomType")
-    private String nomType;
 
 
 }
+

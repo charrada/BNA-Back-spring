@@ -11,14 +11,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class TypePaiementOperation {
+public class TypeCheque {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="idType")
-    private Long idType;
+    @Column(name="numC")
+    private Long numC;
 
-    @Column(name="nomType")
-    private String nomType;
 
 
 }
+

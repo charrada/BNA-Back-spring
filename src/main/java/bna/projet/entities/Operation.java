@@ -47,9 +47,19 @@ public class Operation implements Serializable {
 
 
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "typePaimentOperation")
     private TypePaiementOperation typePaiementOperation;
+
+
+
+    @Column(name="ribV")
+    private Long ribV;
+
+    @Column(name="numC")
+    private Long numC;
+
+
 
 
 
