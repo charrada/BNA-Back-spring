@@ -67,6 +67,7 @@ public class OperationController {
         detailsOperation.setTypePieceEnregistrement(operation.getDetailsOperation().getTypePieceEnregistrement());
         detailsOperation.setTypeTimbrage(operation.getDetailsOperation().getTypeTimbrage());
         detailsOperation.setNumAffaireAuxiliaire(operation.getDetailsOperation().getNumAffaireAuxiliaire());
+        detailsOperation.setIdAuxOperation(operation.getDetailsOperation().getIdAuxOperation());
 
         // Save the detailsOperation object first
         detailsOperationRepository.save(detailsOperation);

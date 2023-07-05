@@ -48,7 +48,8 @@ public class DetailsOperation implements Serializable {
     private Long  numAffaireAuxiliaire;
 
 
-
-
+//mta3 l3abd
+@Column(name="idAuxOperation")
+    private Long idAuxOperation;
 
 }
