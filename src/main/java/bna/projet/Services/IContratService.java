@@ -24,9 +24,10 @@ public interface IContratService {
 
     Etudiant addAndAssignEtudiantToEquipeAndContract(Etudiant e, Long idContrat, Long idEquipe);
 
-    Float getChiffreAffaireEntreDeuxDate(Date startDate, Date endDate, Long idUniversite);
+    double getChiffreAffaireEntreDeuxDate(Date startDate, Date endDate, Long idUniversite);
 
     Contrat affectContratToEtudiant (Contrat ce, String nomE, String prenomE);
+
 
     String retrieveAndUpdateStatusContrat();
 

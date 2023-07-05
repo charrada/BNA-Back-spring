@@ -2,7 +2,6 @@ package bna.projet.Services;
 
 
 import bna.projet.Repository.DepartementRepository;
-import bna.projet.Repository.UniversiteRepository;
 import bna.projet.entities.Departement;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +16,6 @@ public class DepartementService implements  IDepartementService{
     @Autowired //ou @Inject
     DepartementRepository dr;
 
-    @Autowired //ou @Injectl
-    UniversiteRepository UR;
 
     @Override
     public Departement addDepartment(Departement departement) {

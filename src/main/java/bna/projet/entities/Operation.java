@@ -30,13 +30,25 @@ public class Operation implements Serializable {
     private Long idAgent;
 
 
-    @Column(name="description")
-    private String description;
+
 
 
     @Temporal (TemporalType.DATE)
     @Column(name="dateF")
     private Date dateF;
+
+
+
+
+    @Column(name="typeOperation")
+    private String typeOperation;
+
+
+    @Column(name="ribV")
+    private Long ribV;
+
+    @Column(name="numC")
+    private Long numC;
 
 
     // Many-to-one
@@ -53,11 +65,16 @@ public class Operation implements Serializable {
 
 
 
-    @Column(name="ribV")
-    private Long ribV;
+    @OneToOne
+    @JoinColumn(name = "detailsOperation")
+    private DetailsOperation detailsOperation;
 
-    @Column(name="numC")
-    private Long numC;
+
+
+
+
+
+
 
 
 

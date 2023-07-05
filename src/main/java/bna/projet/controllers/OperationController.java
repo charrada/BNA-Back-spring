@@ -2,11 +2,14 @@ package bna.projet.controllers;
 
 
 import bna.projet.Repository.CreditRepository;
+import bna.projet.Repository.DetailsOperationRepository;
 import bna.projet.Repository.OperationRepository;
 import bna.projet.Repository.ReponseRepository;
+import bna.projet.Services.DetailsOperationService;
 import bna.projet.Services.EquipeServiceImpl;
 import bna.projet.Services.OperationService;
 import bna.projet.entities.Credit;
+import bna.projet.entities.DetailsOperation;
 import bna.projet.entities.Etudiant;
 import bna.projet.entities.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +31,11 @@ public class OperationController {
     @Autowired
     OperationRepository operationRepository;
 
+    @Autowired
+    DetailsOperationRepository detailsOperationRepository;
 
+    @Autowired
+    DetailsOperationService detailsOperationService;
     @GetMapping("/")
     public List<Operation> findAllOperation() {
         return operationService.findAllOperation();
@@ -43,27 +50,31 @@ public class OperationController {
     }
 
 
+
+
     @PostMapping("/add")
     public Operation addOperation(@RequestBody Operation operation) {
         // Vérifier si le crédit associé à l'opération existe
         Credit credit = operation.getCredit();
         if (credit == null || credit.getIdCredit() == null) {
-            // Gérer l'erreur de crédit manquant
-            // Vous pouvez lancer une exception ou retourner un message d'erreur approprié
             throw new IllegalArgumentException("Credit is required for the operation");
         }
 
-        // Ajouter l'opération en l'associant au crédit
+        DetailsOperation detailsOperation = new DetailsOperation();
+        // Set the necessary details for the detailsOperation object
+        detailsOperation.setTypeDetails(operation.getDetailsOperation().getTypeDetails());
+        detailsOperation.setNumPieceEnregistrement(operation.getDetailsOperation().getNumPieceEnregistrement());
+        detailsOperation.setTypePieceEnregistrement(operation.getDetailsOperation().getTypePieceEnregistrement());
+        detailsOperation.setTypeTimbrage(operation.getDetailsOperation().getTypeTimbrage());
+        detailsOperation.setNumAffaireAuxiliaire(operation.getDetailsOperation().getNumAffaireAuxiliaire());
+
+        // Save the detailsOperation object first
+        detailsOperationRepository.save(detailsOperation);
+
+        operation.setDetailsOperation(detailsOperation); // Set the detailsOperation for the operation
+
         return operationService.addOperation(operation);
     }
-
-
-
-
-
-
-
-
 
 
 

@@ -2,7 +2,6 @@ package bna.projet.controllers;
 
 import bna.projet.Services.IDepartementService;
 import bna.projet.entities.Departement;
-import bna.projet.entities.Universite;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -25,7 +24,7 @@ public class DepartementController {
 
     @Operation(summary = "Add Departement", description = "Ajouter une Departement")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Ajout Avec Succ",content = { @Content(mediaType = "application/json",schema = @Schema(implementation = Universite.class)) }),
+            @ApiResponse(responseCode = "200", description = "Ajout Avec Succ",content = { @Content(mediaType = "application/json") }),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied",content = @Content),
             @ApiResponse(responseCode = "404", description = "Ajout failed",content = @Content)
     })
@@ -37,7 +36,7 @@ public class DepartementController {
 
     @Operation(summary = "Add List Departement", description = "Ajouter une liste des Departement ")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Ajout Avec Succ",content = { @Content(mediaType = "application/json",schema = @Schema(implementation = Universite.class)) }),
+            @ApiResponse(responseCode = "200", description = "Ajout Avec Succ",content = { @Content(mediaType = "application/json") }),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied",content = @Content),
             @ApiResponse(responseCode = "404", description = "Ajout failed",content = @Content)
     })
@@ -49,7 +48,7 @@ public class DepartementController {
 
     @Operation(summary = "Update a Departement", description = "Modifier une Departement ")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Modifier Avec Succ",content = { @Content(mediaType = "application/json",schema = @Schema(implementation = Universite.class)) }),
+            @ApiResponse(responseCode = "200", description = "Modifier Avec Succ",content = { @Content(mediaType = "application/json") }),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied",content = @Content),
             @ApiResponse(responseCode = "404", description = "Modifier failed",content = @Content)
     })
@@ -61,7 +60,7 @@ public class DepartementController {
 
     @Operation(summary = "Update list Universite", description = "Modifier une liste des Universites ")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Modifier Avec Succ",content = { @Content(mediaType = "application/json",schema = @Schema(implementation = Universite.class)) }),
+            @ApiResponse(responseCode = "200", description = "Modifier Avec Succ",content = { @Content(mediaType = "application/json") }),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied",content = @Content),
             @ApiResponse(responseCode = "404", description = "Modifier failed",content = @Content)
     })
@@ -73,7 +72,7 @@ public class DepartementController {
 
     @Operation(summary = "Delete a Departement By ID", description = "Supprimer une Departement par sont id")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Supp Avec Succ",content = { @Content(mediaType = "application/json",schema = @Schema(implementation = Universite.class)) }),
+            @ApiResponse(responseCode = "200", description = "Supp Avec Succ",content = { @Content(mediaType = "application/json") }),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied",content = @Content),
             @ApiResponse(responseCode = "404", description = "Supp failed",content = @Content)
     })
@@ -85,7 +84,7 @@ public class DepartementController {
 
     @Operation(summary = "Delete a Departement", description = "Supprimer une Departement ")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Supp Avec Succ",content = { @Content(mediaType = "application/json",schema = @Schema(implementation = Universite.class)) }),
+            @ApiResponse(responseCode = "200", description = "Supp Avec Succ",content = { @Content(mediaType = "application/json") }),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied",content = @Content),
             @ApiResponse(responseCode = "404", description = "Supp failed",content = @Content)
     })
@@ -97,7 +96,7 @@ public class DepartementController {
 
     @Operation(summary = "Get AllDepartement", description = "Returns la liste des Departement ")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Found the Universite",content = { @Content(mediaType = "application/json",schema = @Schema(implementation = Universite.class)) }),
+            @ApiResponse(responseCode = "200", description = "Found the Universite",content = { @Content(mediaType = "application/json") }),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied",content = @Content),
             @ApiResponse(responseCode = "404", description = "Universite not found",content = @Content)
     })
@@ -109,7 +108,7 @@ public class DepartementController {
 
     @Operation(summary = "Get Departement par son id", description = "Returns Departement specifique")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Found the Universite",content = { @Content(mediaType = "application/json",schema = @Schema(implementation = Universite.class)) }),
+            @ApiResponse(responseCode = "200", description = "Found the Universite",content = { @Content(mediaType = "application/json") }),
             @ApiResponse(responseCode = "400", description = "Invalid id supplied",content = @Content),
             @ApiResponse(responseCode = "404", description = "Universite not found",content = @Content)
     })

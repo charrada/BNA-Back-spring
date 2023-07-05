@@ -2,7 +2,6 @@ package bna.projet.Services;
 
 import bna.projet.Repository.EquipeRepository;
 import bna.projet.Repository.EtudiantRepository;
-import bna.projet.Repository.UniversiteRepository;
 import bna.projet.entities.*;
 import bna.projet.Repository.ContratRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -28,8 +27,11 @@ public class ContratService implements IContratService {
     @Autowired
     EquipeRepository equipeRepository;
 
-    @Autowired
-    UniversiteRepository universiteRepository;
+    @Override
+    public double getChiffreAffaireEntreDeuxDate(Date startDate, Date endDate, Long someParameter) {
+        // Implement your logic to calculate and return the Chiffre d'Affaire (revenue) here
+        return 0.0; // Replace with your implementation
+    }
 
     @Override
     public Page<Contrat> retrieveAllContrats(Pageable pageable) {
@@ -99,31 +101,7 @@ public class ContratService implements IContratService {
         return e;
     }
 
-    @Override
-    public Float getChiffreAffaireEntreDeuxDate(Date startDate, Date endDate, Long idUniversite) {
-        float montant=0;
-        Universite universite=universiteRepository.findById(idUniversite).get();
-        for (Departement d: universite.getDepartments()){
-            for (Etudiant e:d.getEtudiants()){
-                for(Contrat c:e.getContrats()){
-                    montant+=c.getMontantC();
-                    if(c.getArchive()==false){
-                    if(startDate.after(c.getDateDebutC()) && endDate.after(c.getDateFinC())){
-                        if (c.getSpecailite()==Specailite.IA){
-                            montant=montant+300;
-                        }else if (c.getSpecailite()==Specailite.RESEAU){
-                            montant=montant+350;
-                        }else if (c.getSpecailite()==Specailite.CLOUD){
-                            montant=montant+400;
-                        }else if(c.getSpecailite()==Specailite.SECURITE){
-                            montant=montant+450;
-                        }
-                    }
-                }}
-            }
-        }
-        return montant;
-    }
+
 
 
     @Override
