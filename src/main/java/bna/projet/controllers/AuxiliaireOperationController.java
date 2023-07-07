@@ -27,6 +27,11 @@ public class AuxiliaireOperationController {
     public List<AuxiliaireOperation> getByType(@PathVariable String type) {
         return auxiliaireOperationRepository.findByTypeAux(type);
     }
+    @GetMapping("/{id}")
+    public AuxiliaireOperation getAuxiliaireOperationById(@PathVariable Long id) {
+        return auxiliaireOperationRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Auxiliaire operation not found with id: " + id));
+    }
 
 
 }

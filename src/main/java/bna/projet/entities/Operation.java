@@ -43,6 +43,8 @@ public class Operation implements Serializable {
     @Column(name="typeOperation")
     private String typeOperation;
 
+    @Column(name="etatOperation")
+    private String etatOperation;
 
     @Column(name="ribV")
     private Long ribV;
