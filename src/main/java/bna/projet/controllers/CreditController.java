@@ -26,6 +26,24 @@ public class CreditController {
 
 
 
+    @PutMapping("addMontant/{id}/{m}")
+    public Credit addMontantCredit(@PathVariable Long id, @PathVariable long m,@RequestBody Credit c) {
+        // Vérifier si l'opération existe
+        c = creditService.findCreditById(id);
+        c.setMontant(m+c.getMontant());
+        return creditRepository.save(c);
+    }
+
+
+    @PutMapping("reduceMontant/{id}/{m}")
+    public Credit reduceMontantCredit(@PathVariable Long id, @PathVariable long m,@RequestBody Credit c) {
+        // Vérifier si l'opération existe
+        c = creditService.findCreditById(id);
+        c.setMontant(c.getMontant()-m);
+        return creditRepository.save(c);
+    }
+
+
 
 
     @PostMapping("/addCredit")

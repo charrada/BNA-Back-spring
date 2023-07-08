@@ -22,6 +22,8 @@ public class schedulars {
     IProjetService ps;
     @Autowired
     EquipeRepository equipeRepository;
+
+    /*
    @Scheduled(cron = "* 1 * * * * ")
     public void selectAll(){
         List<Etudiant> list=(List<Etudiant>) etudiantRepository.findAll();
@@ -30,7 +32,7 @@ public class schedulars {
         }
     }
 
-    /*@Scheduled(fixedRate = 30000)
+    @Scheduled(fixedRate = 30000)
     public void select(){
         System.out.println(contratService.retrieveAndUpdateStatusContrat());
     }

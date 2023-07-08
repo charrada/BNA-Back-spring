@@ -32,4 +32,10 @@ public class CreditService implements ICreditService {
         return creditRepository.findAll();
     }
 
+
+    @Override
+
+    public Credit findCreditById(Long id) {
+        return creditRepository.findById(id).orElse(new Credit());
+    }
 }

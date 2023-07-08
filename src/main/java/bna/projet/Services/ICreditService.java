@@ -10,4 +10,6 @@ public interface ICreditService {
 
 
     List<Credit> findAllCredit();
+
+    Credit findCreditById(Long id);
 }

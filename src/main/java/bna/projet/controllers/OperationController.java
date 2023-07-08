@@ -8,10 +8,7 @@ import bna.projet.Repository.ReponseRepository;
 import bna.projet.Services.DetailsOperationService;
 import bna.projet.Services.EquipeServiceImpl;
 import bna.projet.Services.OperationService;
-import bna.projet.entities.Credit;
-import bna.projet.entities.DetailsOperation;
-import bna.projet.entities.Etudiant;
-import bna.projet.entities.Operation;
+import bna.projet.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -47,6 +44,26 @@ public class OperationController {
         credit.setIdCredit(creditId);
 
         return operationRepository.findByCredit(credit);
+    }
+
+
+
+    @GetMapping("admin/{typeOperation}/{etatOperation}")
+    public List<Operation> getOperationsByEtatAndType( @PathVariable String typeOperation,
+                                                       @PathVariable String etatOperation
+
+    ) {
+        return operationRepository.findByEtatOperationAndTypeOperation(etatOperation, typeOperation);
+    }
+
+
+
+    @PutMapping("changeEtat/{id}/{etat}")
+    public Operation updateOperation(@PathVariable Long id, @PathVariable String etat,@RequestBody Operation op) {
+        // Vérifier si l'opération existe
+         op = operationService.findOperationById(id);
+        op.setEtatOperation(etat);
+        return operationRepository.save(op);
     }
 
 
