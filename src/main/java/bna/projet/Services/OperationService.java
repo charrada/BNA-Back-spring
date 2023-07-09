@@ -28,6 +28,7 @@ public class OperationService implements IOperationService{
         return operationRepository.findAll();
     }
 
+
     @Override
     public Operation findOperationById(Long id) {
         return operationRepository.findById(id).orElse(new Operation());
