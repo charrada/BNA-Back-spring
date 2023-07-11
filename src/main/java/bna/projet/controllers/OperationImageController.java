@@ -1,9 +1,8 @@
 package bna.projet.controllers;
 
-import bna.projet.Repository.OperationImageRepository;
+import bna.projet.Repository.OperationFileRepository;
 import bna.projet.entities.OperationImage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,7 +20,8 @@ import java.util.zip.Inflater;
 public class OperationImageController {
 
     @Autowired
-    OperationImageRepository imageRepository;
+    OperationFileRepository imageRepository;
+
     @PostMapping("/upload")
     public ResponseEntity<OperationImage> uplaodImage(@RequestParam("imageFile") MultipartFile file, @RequestParam("idOperation") Long idOperation) throws IOException {
         System.out.println("Original Image Byte Size - " + file.getBytes().length);
@@ -34,21 +34,33 @@ public class OperationImageController {
         return ResponseEntity.ok(img);
     }
 
-
-
     @GetMapping(path = { "/get/{idOperation}" })
-    public OperationImage getImageByOperationId(@PathVariable("idOperation") Long idOperation) throws IOException {
+    public ResponseEntity<OperationImage> getImageByOperationId(@PathVariable("idOperation") Long idOperation) throws IOException {
         final Optional<OperationImage> retrievedImage = imageRepository.findByIdOperation(idOperation);
         if (retrievedImage.isPresent()) {
             OperationImage img = retrievedImage.get();
             img.setPicByte(decompressBytes(img.getPicByte())); // Decompress the image bytes
-            return img;
+            return ResponseEntity.ok(img);
         } else {
             throw new IOException("Image not found for operation ID: " + idOperation);
         }
     }
 
-
+    @GetMapping(path = { "/getT/{idOperation}" })
+    public ResponseEntity<String> getTextContentByOperationId(@PathVariable("idOperation") Long idOperation) throws IOException {
+        final Optional<OperationImage> retrievedImage = imageRepository.findByIdOperation(idOperation);
+        if (retrievedImage.isPresent()) {
+            OperationImage img = retrievedImage.get();
+            if (img.getType().equals("text/plain")) {
+                String textContent = new String(decompressBytes(img.getPicByte()));
+                return ResponseEntity.ok(textContent);
+            } else {
+                throw new IOException("File is not a text file");
+            }
+        } else {
+            throw new IOException("Image not found for operation ID: " + idOperation);
+        }
+    }
 
     // compress the image bytes before storing it in the database
     public static byte[] compressBytes(byte[] data) {
