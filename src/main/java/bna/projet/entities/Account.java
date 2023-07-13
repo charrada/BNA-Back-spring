@@ -33,6 +33,15 @@ public class Account implements Serializable {
 
 
 
+    @Column(name="Nom")
+    private String Nom;
+
+    @Column(name="prenom")
+    private String prenom;
+
+
+
+
 
     @Column(name="typeAccount")
     private String typeAccount;

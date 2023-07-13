@@ -1,7 +1,7 @@
 package bna.projet.controllers;
 
 import bna.projet.Repository.OperationFileRepository;
-import bna.projet.entities.OperationFile;
+import bna.projet.entities.OperationImage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,9 +23,9 @@ public class OperationFileController {
     OperationFileRepository imageRepository;
 
     @PostMapping("/upload")
-    public ResponseEntity<OperationFile> uplaodImage(@RequestParam("imageFile") MultipartFile file, @RequestParam("idOperation") Long idOperation) throws IOException {
+    public ResponseEntity<OperationImage> uplaodImage(@RequestParam("imageFile") MultipartFile file, @RequestParam("idOperation") Long idOperation) throws IOException {
         System.out.println("Original Image Byte Size - " + file.getBytes().length);
-        OperationFile img = new OperationFile();
+        OperationImage img = new OperationImage();
         img.setName(file.getOriginalFilename());
         img.setType(file.getContentType());
         img.setPicByte(compressBytes(file.getBytes()));
@@ -35,10 +35,10 @@ public class OperationFileController {
     }
 
     @GetMapping(path = { "/get/{idOperation}" })
-    public ResponseEntity<OperationFile> getImageByOperationId(@PathVariable("idOperation") Long idOperation) throws IOException {
-        final Optional<OperationFile> retrievedImage = imageRepository.findByIdOperation(idOperation);
+    public ResponseEntity<OperationImage> getImageByOperationId(@PathVariable("idOperation") Long idOperation) throws IOException {
+        final Optional<OperationImage> retrievedImage = imageRepository.findByIdOperation(idOperation);
         if (retrievedImage.isPresent()) {
-            OperationFile img = retrievedImage.get();
+            OperationImage img = retrievedImage.get();
             img.setPicByte(decompressBytes(img.getPicByte())); // Decompress the image bytes
             return ResponseEntity.ok(img);
         } else {
@@ -48,9 +48,9 @@ public class OperationFileController {
 
     @GetMapping(path = { "/getT/{idOperation}" })
     public ResponseEntity<String> getTextContentByOperationId(@PathVariable("idOperation") Long idOperation) throws IOException {
-        final Optional<OperationFile> retrievedImage = imageRepository.findByIdOperation(idOperation);
+        final Optional<OperationImage> retrievedImage = imageRepository.findByIdOperation(idOperation);
         if (retrievedImage.isPresent()) {
-            OperationFile img = retrievedImage.get();
+            OperationImage img = retrievedImage.get();
             if (img.getType().equals("text/plain")) {
                 String textContent = new String(decompressBytes(img.getPicByte()));
                 return ResponseEntity.ok(textContent);

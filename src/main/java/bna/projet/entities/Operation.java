@@ -52,6 +52,9 @@ public class Operation implements Serializable {
     @Column(name="numC")
     private Long numC;
 
+    @Column(name="vu")
+    private Long vu;
+
 
     // Many-to-one
     @ManyToOne

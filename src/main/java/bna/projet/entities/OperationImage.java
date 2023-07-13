@@ -13,7 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class OperationFile implements Serializable {
+public class OperationImage implements Serializable {
 
     @Id
     @Column(name = "id")

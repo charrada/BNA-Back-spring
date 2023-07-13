@@ -28,13 +28,15 @@ public class AccountController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody Account account) {
+    public ResponseEntity<?> login(@RequestBody Account account) {
         boolean authenticated = accountService.authenticateAccount(account.getUsername(), account.getPassword());
 
         if (authenticated) {
-            return ResponseEntity.ok("Login successful!");
+            return ResponseEntity.ok().body("{\"message\": \"Login successful!\"}");
         } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password.");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("{\"error\": \"Invalid username or password.\"}");
         }
     }
+
+
 }
