@@ -9,11 +9,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BNA-Back-spring" />
         <module name="amdouniDev" />
+        <module name="BNA-Back-Spring" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BNA-Back-Spring" options="-parameters" />
       <module name="BNA-Back-spring" options="-parameters" />
       <module name="amdouniDev" options="-parameters" />
     </option>
