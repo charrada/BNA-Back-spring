@@ -18,12 +18,23 @@ public class AccountController {
 
     @PostMapping("/register")
     public ResponseEntity<String> registerAccount(@RequestBody Account account) {
+        boolean isUsernameExists = accountService.isUsernameExists(account.getUsername());
+        boolean isEmailExists = accountService.isEmailExists(account.getEmail());
+
+        if (isUsernameExists) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("{\"error\": \"Username already exists.\"}");
+        }
+
+        if (isEmailExists) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("{\"error\": \"Email already exists.\"}");
+        }
+
         Account registeredAccount = accountService.registerAccount(account);
 
         if (registeredAccount != null) {
-            return ResponseEntity.ok("Account registered successfully!");
+            return ResponseEntity.ok().body("{\"message\": \"Registered successfully!\"}");
         } else {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to register account.");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("{\"error\": \"Failed to register account.\"}");
         }
     }
 

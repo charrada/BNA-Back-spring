@@ -11,15 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 // AccountService.java
-import bna.projet.Repository.AccountRepository;
-import bna.projet.entities.Account;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 @Service
 @Slf4j
@@ -78,5 +70,18 @@ public class AccountService implements IAccountService {
             log.error("Failed to encrypt password due to unsupported algorithm.");
             return null;
         }
+    }
+
+    @Override
+    public boolean isEmailExists(String email) {
+        return accountRepository.existsByEmail(email);
+
+    }
+
+    @Override
+
+    public boolean isUsernameExists(String username) {
+        return accountRepository.existsByUsername(username);
+
     }
 }

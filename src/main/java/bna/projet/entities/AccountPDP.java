@@ -13,7 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class OperationImage implements Serializable {
+public class AccountPDP implements Serializable {
 
     @Id
     @Column(name = "id")
@@ -27,19 +27,19 @@ public class OperationImage implements Serializable {
     private String type;
 
 
-    @Column(name="idOperation")
-    private Long  idOperation;
+    @Column(name="username")
+    private String  username;
 
-    //image bytes can have large lengths so we specify a value
-    //which is more than the default length for picByte column
-    @Column(name = "picByte",columnDefinition = "VARBINARY(10000)")
+    @Lob // use @Lob annotation to store large binary data
+    @Column(name = "picByte", columnDefinition = "VARBINARY(10000)") // increase column length and use LONGBLOB type
+
     private byte[] picByte;
 
 
 
 
 
-
+    
 
 
 

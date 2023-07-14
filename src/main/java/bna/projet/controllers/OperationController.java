@@ -1,22 +1,17 @@
 package bna.projet.controllers;
 
 
-import bna.projet.Repository.CreditRepository;
 import bna.projet.Repository.DetailsOperationRepository;
 import bna.projet.Repository.OperationRepository;
-import bna.projet.Repository.ReponseRepository;
 import bna.projet.Services.DetailsOperationService;
-import bna.projet.Services.EquipeServiceImpl;
 import bna.projet.Services.OperationService;
 import bna.projet.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("operation")
@@ -47,14 +42,51 @@ public class OperationController {
     }
 
 
+    @GetMapping("admin/count/{typeOperation}/{vu}")
+    public long getCountOperationsByType(@PathVariable String typeOperation,
+
+                                                @PathVariable int vu) {
+        return operationRepository.countByTypeOperationAndVu( typeOperation, vu);
+    }
+
+
+
+
+    @GetMapping("admin/not/{typeOperation}")
+    public List<Operation> getNotOperationsByEtatAndType(@PathVariable String typeOperation
+                                                     ) {
+        List<Operation> operations = operationRepository.findByTypeOperation( typeOperation);
+
+        // Sort the operations based on the date
+        Collections.sort(operations, Comparator.comparing(Operation::getDateF).reversed());
+
+        return operations;
+    }
+
 
     @GetMapping("admin/{typeOperation}/{etatOperation}")
-    public List<Operation> getOperationsByEtatAndType( @PathVariable String typeOperation,
-                                                       @PathVariable String etatOperation
-
-    ) {
+    public List<Operation> getOperationsByEtatAndType(@PathVariable String typeOperation,
+                                                      @PathVariable String etatOperation) {
         return operationRepository.findByEtatOperationAndTypeOperation(etatOperation, typeOperation);
     }
+
+    @PutMapping("admin/update/{vu}")
+    public void updateVuForAllOperations(@PathVariable Integer vu) {
+        Integer defaultVu = 1; // Default value if vu is null
+
+        List<Operation> operations = operationRepository.findAll();
+        operations.forEach(operation -> {
+            Integer vuValue = vu != null ? vu : defaultVu;
+            operation.setVu(vuValue);
+        });
+
+        operationRepository.saveAll(operations);
+    }
+
+
+
+
+
 
 
 

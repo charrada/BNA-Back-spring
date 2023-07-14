@@ -11,4 +11,7 @@ public interface IAccountService {
     boolean login(String username, String password);
     String encryptPassword(String password);
 
+    boolean isEmailExists(String email);
+
+    boolean isUsernameExists(String username);
 }

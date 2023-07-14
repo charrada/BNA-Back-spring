@@ -53,7 +53,7 @@ public class Operation implements Serializable {
     private Long numC;
 
     @Column(name="vu")
-    private Long vu;
+    private Integer vu;
 
 
     // Many-to-one
