@@ -31,7 +31,7 @@ public class AccountPDP implements Serializable {
     private String  username;
 
     @Lob // use @Lob annotation to store large binary data
-    @Column(name = "picByte", columnDefinition = "VARBINARY(10000)") // increase column length and use LONGBLOB type
+    @Column(name = "picByte", columnDefinition = "LONGBLOB")
 
     private byte[] picByte;
 

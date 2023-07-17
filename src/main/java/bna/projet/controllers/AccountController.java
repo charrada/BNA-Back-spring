@@ -49,5 +49,17 @@ public class AccountController {
         }
     }
 
+    @GetMapping("/findByUsername/{username}")
+    public ResponseEntity<?> findAccountByUsername(@PathVariable String username) {
+        Account account = accountService.findAccountByUsername(username);
+
+        if (account != null) {
+            return ResponseEntity.ok(account);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"error\": \"Account not found.\"}");
+        }
+    }
+
+
 
 }

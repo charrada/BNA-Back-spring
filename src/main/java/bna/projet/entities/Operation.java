@@ -33,7 +33,7 @@ public class Operation implements Serializable {
 
 
 
-    @Temporal (TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name="dateF")
     private Date dateF;
 

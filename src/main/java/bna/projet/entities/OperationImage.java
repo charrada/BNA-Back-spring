@@ -32,7 +32,7 @@ public class OperationImage implements Serializable {
 
     //image bytes can have large lengths so we specify a value
     //which is more than the default length for picByte column
-    @Column(name = "picByte",columnDefinition = "VARBINARY(10000)")
+    @Column(name = "picByte", columnDefinition = "LONGBLOB")
     private byte[] picByte;
 
 
