@@ -18,4 +18,6 @@ public interface OperationRepository extends JpaRepository<Operation, Long> {
     List<Operation> findByCredit(Credit credit);
 
     long countByTypeOperationAndVu(String typeOperation, int vu);
+
+    long countByEtatOperationAndTypeOperation(String etatOperation, String typeOperation);
 }

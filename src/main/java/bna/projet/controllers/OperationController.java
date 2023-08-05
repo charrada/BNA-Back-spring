@@ -70,6 +70,15 @@ public class OperationController {
         return operationRepository.findByEtatOperationAndTypeOperation(etatOperation, typeOperation);
     }
 
+
+    @GetMapping("/count/admin/{typeOperation}/{etatOperation}")
+    public long getCountOperationsByEtatAndType(@PathVariable String typeOperation,
+                                                @PathVariable String etatOperation) {
+        return operationRepository.countByEtatOperationAndTypeOperation(etatOperation, typeOperation);
+    }
+
+
+
     @PutMapping("admin/update/{vu}")
     public void updateVuForAllOperations(@PathVariable Integer vu) {
         Integer defaultVu = 1; // Default value if vu is null
