@@ -72,6 +72,7 @@ public class AccountService implements IAccountService {
         }
     }
 
+
     @Override
     public boolean isEmailExists(String email) {
         return accountRepository.existsByEmail(email);

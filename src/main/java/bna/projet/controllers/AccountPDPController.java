@@ -41,6 +41,8 @@ public class AccountPDPController {
         }
     }
 
+    
+
     @GetMapping(path = { "/get/{username}" })
     public ResponseEntity<AccountPDP> getPDPByUsername(@PathVariable("username") String username) {
         final Optional<AccountPDP> retrievedImage = imageRepository.findByUsername(username);
