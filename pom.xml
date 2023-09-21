@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>esprit.tn</groupId>
-    <artifactId>amdouniDev</artifactId>
+    <artifactId>Charrada</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Kaddem</name>
     <description>Kaddem</description>

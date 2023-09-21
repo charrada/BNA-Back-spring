@@ -8,7 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BNA-Back-spring" />
-        <module name="amdouniDev" />
+        <module name="Charrada" />
         <module name="BNA-Back-Spring" />
       </profile>
     </annotationProcessing>
@@ -17,7 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="BNA-Back-Spring" options="-parameters" />
       <module name="BNA-Back-spring" options="-parameters" />
-      <module name="amdouniDev" options="-parameters" />
+      <module name="Charrada" options="-parameters" />
     </option>
   </component>
 </project>
