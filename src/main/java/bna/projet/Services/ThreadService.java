@@ -1,7 +1,5 @@
 package bna.projet.Services;
 
-import bna.projet.entities.Thread;
-
 import java.util.List;
 
 public interface ThreadService {

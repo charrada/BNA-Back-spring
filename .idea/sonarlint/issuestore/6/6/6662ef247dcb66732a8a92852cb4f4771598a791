@@ -1,0 +1,77 @@
+
+a	java:S112å"FDefine and throw a dedicated exception instead of using a generic one.(îøÿÿÿÿ
+g
+java:S1192¡"KDefine a constant instead of duplicating this literal "equipe.jpg" 3 times.(Øã”ùÿÿÿÿ
+}
+java:S1488ˆ"aImmediately return this expression instead of assigning it to the temporary variable "etudiants".(°Öä´üÿÿÿÿ
+C
+java:S5411e"(Use a primitive boolean expression here.(¬’Æıÿÿÿÿ
+D
+java:S5411Œ"(Use a primitive boolean expression here.(Ùµçıùÿÿÿÿ
+X
+java:S4973Š"<Strings and Boxed types should be compared using "equals()".(¥‡¦ªøÿÿÿÿ
+g
+java:S3655‡"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ò™Ã¶
+f
+java:S3655c"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ò™Ã¶
+X
+java:S6813*"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813,"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813."BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S68130"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S68135"BRemove this field injection and use constructor injection instead.(êæÄŞ
+Y
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ
+Y
+java:S6813á"BRemove this field injection and use constructor injection instead.(êæÄŞ
+Y
+java:S6813¾"BRemove this field injection and use constructor injection instead.(êæÄŞ
+=
+java:S1905>"'Remove this unnecessary cast to "List".(ğ˜©•
+c	java:S100Q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’¨“ï
+V
+java:S4684Q"@Replace this persistent entity with a simple POJO or DTO object.(’¨“ï
+c	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¤Ï°
+B
+java:S1125e"'Remove the unnecessary boolean literal.(¬’Æıÿÿÿÿ
+V	java:S125p"<This block of commented-out lines of code should be removed.(¤ßÊåûÿÿÿÿ
+i	java:S100†"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÊë“ûÿÿÿÿ
+>
+java:S1905ˆ"'Remove this unnecessary cast to "List".(±äÑ§
+C
+java:S1125Œ"'Remove the unnecessary boolean literal.(Ùµçıùÿÿÿÿ
+A	java:S106"+Replace this use of System.out by a logger.(áœ™Â
+F	java:S106‘"+Replace this use of System.out by a logger.(Ûã¥úÿÿÿÿ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ªÙüÿÿÿÿ
+W	java:S125µ"<This block of commented-out lines of code should be removed.(Õ—áúşÿÿÿÿ
+i	java:S100È"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²‘‚¢ûÿÿÿÿ
+\
+java:S4684È"@Replace this persistent entity with a simple POJO or DTO object.(²‘‚¢ûÿÿÿÿ
+\
+java:S4684È"@Replace this persistent entity with a simple POJO or DTO object.(²‘‚¢ûÿÿÿÿ
+W
+java:S4684Ö"@Replace this persistent entity with a simple POJO or DTO object.(Ä®ÔÊ
+i	java:S100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ñ«»ùÿÿÿÿ
+\
+java:S4684¨"@Replace this persistent entity with a simple POJO or DTO object.(±ƒ‰Şûÿÿÿÿ
+M
+java:S1854ÿ"6Remove this useless assignment to local variable "d3".(óÚİƒ
+>
+java:S1481ÿ"'Remove this unused "d3" local variable.(óÚİƒ
+F	java:S106"+Replace this use of System.out by a logger.(ğ¯çùşÿÿÿÿ
+R	java:S125ƒ"<This block of commented-out lines of code should be removed.(„§ñ£
+d	java:S100“"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ş‰
+ƒ
+java:S1130“"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(’ş‰
+`
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(³„¬+
+W	java:S125"<This block of commented-out lines of code should be removed.(„Ùµ—ÿÿÿÿÿ
+W	java:S125"<This block of commented-out lines of code should be removed.(Õ—áúşÿÿÿÿ
+F	java:S106³"+Replace this use of System.out by a logger.(æÏæÉúÿÿÿÿ
+W	java:S125ò"<This block of commented-out lines of code should be removed.(²˜¼Àşÿÿÿÿ
+d	java:S100›"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍØ¢è
+R	java:S125ª"<This block of commented-out lines of code should be removed.(åšÆ

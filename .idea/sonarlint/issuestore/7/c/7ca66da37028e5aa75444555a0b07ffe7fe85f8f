@@ -1,0 +1,18 @@
+
+f	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àĞ“‡
+f	java:S117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖÿÕ
+t	java:S116"ZRename this field "EtudiantService" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÁÌŞüÿÿÿÿ
+r	java:S116"]Rename this field "EtudiantRepository" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú£¤é
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ
+B
+java:S1905"'Remove this unnecessary cast to "List".(à½ì‘üÿÿÿÿ
+c	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àĞ“‡
+V
+java:S4684$"@Replace this persistent entity with a simple POJO or DTO object.(àĞ“‡
+V
+java:S4684+"@Replace this persistent entity with a simple POJO or DTO object.(ÖÿÕ

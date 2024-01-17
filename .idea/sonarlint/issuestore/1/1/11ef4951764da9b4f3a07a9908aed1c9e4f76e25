@@ -1,0 +1,16 @@
+
+`	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(¯¾Øôùÿÿÿÿ
+f
+java:S1104"PMake TYPE a static final constant or non-public and provide accessors if needed.(Þî¯…
+@
+java:S1444"*Make this "public static TYPE" field final(Þî¯…
+e
+java:S3008"ORename this field "TYPE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þî¯…
+m
+java:S3008"RRename this field "HEADERs" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡²†£üÿÿÿÿ
+k
+java:S3008"PRename this field "SHEET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º¡ŸÏøÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(œŽ‚òüÿÿÿÿ
+Q	java:S125&"<This block of commented-out lines of code should be removed.(ôè¢°
+Q	java:S125:"<This block of commented-out lines of code should be removed.(úì­È

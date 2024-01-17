@@ -1,0 +1,54 @@
+
+D
+java:S5411¬"(Use a primitive boolean expression here.(óÉÕ¶ûÿÿÿÿ
+?
+java:S5411·"(Use a primitive boolean expression here.(É®Ý©
+X
+java:S4973¬"<Strings and Boxed types should be compared using "equals()".(óÉÕ¶ûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬©ôäûÿÿÿÿ
+f
+java:S3655Û"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(„ÈŸi
+l
+java:S3655–"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(Üä‘äúÿÿÿÿ
+l
+java:S3655Â"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(µ°Õ÷ûÿÿÿÿ
+l
+java:S3655°"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(œ‹Õ¢þÿÿÿÿ
+f
+java:S3655Ì"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(„ÈŸi
+l
+java:S3655¹"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(œ‹Õ¢þÿÿÿÿ
+g
+java:S3655Ë"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(áâ³×
+g
+java:S3655Ü"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(áâ³×
+f
+java:S3655‰"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(„ÈŸi
+l
+java:S3655•"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÿêïžúÿÿÿÿ
+˜
+java:S1186Å"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ý¸Òß
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813!"BRemove this field injection and use constructor injection instead.(êæÄÞ
+Y
+java:S6813œ"BRemove this field injection and use constructor injection instead.(êæÄÞ
+V
+java:S16121";Replace this lambda with method reference 'this::mapToDTO'.(»õÑüÿÿÿÿ
+V	java:S125H"<This block of commented-out lines of code should be removed.(ï·Á“ýÿÿÿÿ
+V	java:S125R"<This block of commented-out lines of code should be removed.(Õ—áúþÿÿÿÿ
+Q	java:S125X"<This block of commented-out lines of code should be removed.(¢Öñª
+V	java:S125y"<This block of commented-out lines of code should be removed.(‹ôÄ£úÿÿÿÿ
+]
+java:S1126¬"AReplace this if-then-else statement by a single return statement.(óÉÕ¶ûÿÿÿÿ
+C
+java:S1125¬"'Remove the unnecessary boolean literal.(óÉÕ¶ûÿÿÿÿ
+>
+java:S1125·"'Remove the unnecessary boolean literal.(É®Ý©
+W	java:S125Ò"<This block of commented-out lines of code should be removed.(–±Œôûÿÿÿÿ
+A	java:S106©"+Replace this use of System.out by a logger.(ž¶öã

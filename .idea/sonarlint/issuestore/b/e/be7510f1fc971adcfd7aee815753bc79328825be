@@ -1,0 +1,25 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(üüÊøûÿÿÿÿ
+X
+java:S1128"=Remove this unused import 'com.google.api.client.util.Value'.(ã·Ö—úÿÿÿÿ
+`
+java:S1128"ERemove this unused import 'com.google.auth.oauth2.GoogleCredentials'.(«îÿ”úÿÿÿÿ
+W
+java:S1128"<Remove this unused import 'com.google.firebase.FirebaseApp'.(å·¢Çøÿÿÿÿ
+[
+java:S1128"@Remove this unused import 'com.google.firebase.FirebaseOptions'.(¯»í´úÿÿÿÿ
+g
+java:S1128"LRemove this unused import 'com.google.firebase.messaging.FirebaseMessaging'.(Ë¾Òªşÿÿÿÿ
+C
+java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ
+^
+java:S1128	"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş
+e
+java:S1128
+"JRemove this unused import 'org.springframework.core.io.ClassPathResource'.(İ¹º§ıÿÿÿÿ
+J
+java:S1128"4Remove this unused import 'java.io.FileInputStream'.(˜³ÉÓ
+K
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ
+E
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ

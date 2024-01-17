@@ -1,0 +1,4 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(õ™™Í8¸û£¦Ñ1
+s	java:S116"YRename this field "nombre_classes" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Ø‹Îøÿÿÿÿ
+r	java:S116"XRename this field "nombre_detage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×æ¦Ùþÿÿÿÿ

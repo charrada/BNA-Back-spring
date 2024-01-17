@@ -5,8 +5,7 @@ import bna.projet.Repository.CreditRepository;
 import bna.projet.Services.CreditService;
 import bna.projet.entities.Credit;
 import bna.projet.entities.Debiteur;
-import bna.projet.entities.Departement;
-import bna.projet.entities.Operation;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

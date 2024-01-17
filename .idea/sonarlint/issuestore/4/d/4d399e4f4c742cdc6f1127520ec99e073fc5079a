@@ -1,0 +1,13 @@
+
+k	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù ƒ øÿÿÿÿ
+f	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êðƒ‡
+r	java:S116"XRename this field "ThreadService" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆå’ÿÿÿÿÿÿ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+V	java:S125"<This block of commented-out lines of code should be removed.(©°Ôùÿÿÿÿ
+h	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù ƒ øÿÿÿÿ
+E	java:S106C"+Replace this use of System.out by a logger.(»æÅáøÿÿÿÿ
+<
+java:S1452M"&Remove usage of generic wildcard type.(®ÝÒü

@@ -20,16 +20,8 @@ public class Credit implements Serializable {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="idCredit")
     private Long  idCredit;
-
-
-
     @Column(name="montant")
     private Float montant;
-
-
-
-
-
     @ManyToOne
     @JoinColumn(name = "debiteur_id")
     private Debiteur debiteur;

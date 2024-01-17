@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬©ôäûÿÿÿÿ
+[
+java:S2095B"FUse try-with-resources or close this "Document" in a "finally" clause.(µëÜJ
+`
+java:S3252K"EUse static access with "com.lowagie.text.Element" for "ALIGN_CENTER".(¶–Òðøÿÿÿÿ
